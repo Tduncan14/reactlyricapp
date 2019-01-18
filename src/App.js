@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/layout/Navbar';
+import Index from './components/layout/Index';
 import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
