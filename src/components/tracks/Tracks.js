@@ -1,0 +1,40 @@
+import React, {Component} from 'react';
+import {Consumer} from '../../context';
+
+
+class Tracks extends Component {
+    render(){
+       return(
+           <Consumer>
+               {value => {
+                    console.log(value);
+                    return <h1>Tracks</h1>
+               }}
+           </Consumer>
+       )
+
+    }
+}
+
+
+
+export default Tracks;
+
+/*
+ import React, {Component} from 'react'; 
+
+  class Tracks extends Component {
+      render(){
+
+        return(
+            <div>
+
+            </div>
+        )
+      }
+  }
+
+   export default Tracks;
+
+
+*/
