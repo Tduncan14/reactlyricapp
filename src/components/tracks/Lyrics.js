@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import Spinner from '../layout/Spinner';
+import Moment  from 'react-moment';
  class Lyrics extends Component {
      state ={
          track:{},
@@ -56,18 +57,19 @@ import Spinner from '../layout/Spinner';
 
                  <ul className="list-group mt-3">
                    <li className="list-group-item">
-                   <strong>Album Name</strong>:{track.album_name}
+                   <strong>Album Name</strong>:{' '}
+                       {track.album_name}
                    </li>
                    <li className ="list-group-item mt-1">
                    <strong> Song Genre</strong>:{' '}{ track.primary_genres.music_genre_list.length === 0 ? 'none classified' : track.primary_genres.music_genre_list[0].music_genre.music_genre_name}</li>
                   
                   <li className="list-group-item mt-1">
-               <strong>Explicits Words</strong>{track.explicit === 0 ? 'No' : 'Yes'}
+               <strong>Explicits Words{' '}</strong>{track.explicit === 0 ? 'No' : 'Yes'}
                   </li>
 
                   <li className="list-group-item mt-1">
-                    <strong>Release Date</strong>
-                    {track.first_release_date}
+                    <strong>Release Date {' '}</strong>
+                  <Moment format="MM/DD/YYYY">{track.first_release_date}</Moment>
                   </li>
                  </ul>
 
